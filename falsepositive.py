@@ -93,7 +93,7 @@ try:
             font.setPointSize(10)
             self.launcherversion.setFont(font)
             self.launcherversion.setObjectName("launcherversion")
-            self.launcherversion.setText('PRE-Alpha 0.0.3')
+            self.launcherversion.setText('PRE-Alpha 0.0.2')
             self.verticalLayout.addWidget(self.launcherversion, 0, QtCore.Qt.AlignHCenter)
             spacerItem = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
             self.verticalLayout.addItem(spacerItem)
