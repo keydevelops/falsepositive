@@ -16,7 +16,6 @@ class LaunchTread(QtCore.QThread):
 
     progress = 0
     progress_max = 0
-    progress_label = ''
 
     def __init__(self):
         super().__init__()
