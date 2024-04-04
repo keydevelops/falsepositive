@@ -2,7 +2,7 @@
 title [ FalsePositive ] building...
 echo Building launcher...
 copy main.py falsepositive.py
-rd build /s/q
+rd dist /s/q
 
 pyinstaller --noconfirm --onefile --windowed  "falsepositive.py"
 
