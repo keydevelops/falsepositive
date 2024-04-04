@@ -1,9 +1,9 @@
 try:
     import minecraft_launcher_lib as mcll
     import subprocess
+    import random
 
     from uuid import uuid1
-    from random_username.generate import generate_username
     from PyQt5 import QtCore, QtGui, QtWidgets
 
     class LaunchTread(QtCore.QThread):
@@ -56,7 +56,8 @@ try:
             mcll.install.install_minecraft_version(versionid=version, minecraft_directory=self.mcdir, callback=callback)
             
             if not username:
-                username = generate_username()[0]
+                randomint = random.randint(1, 100000000)
+                username = f"FP_{randomint}"
                     
             options = {
                 'username': username,
@@ -138,7 +139,9 @@ try:
 
         def launchgame(self):
             self.launch_thread.launch_setup_signal.emit(self.versions.currentText(), self.username.text())
-            self.launch_thread.start()
+            self.launch_thread.start() 
+            
+            
 
         def update_progress(self, progress, maxProgress):
             self.progressBar.setValue(progress)
